@@ -1,167 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Auralis</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Login con Clave Estática</title>
+    <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <nav class="top-header">
-      <a href="" class="logo">
-        <img height="" width="" src="png/logo123.png" alt="" />
-      </a>
-      <ul class="Menu-Horizontal">
-        <li><a href="">Menu</a></li>
+    <section class="login-container">
+      <div class="login-box">
+        <h2>Acceso Restringido</h2>
 
-        <li>
-          <a href="">Catalogo</a>
-          <ul class="Menu-Vetical">
-            <li><a href="">Teclados</a></li>
-            <li><a href="">Pantallas</a></li>
-            <li><a href="">Laptops</a></li>
-            <li><a href="">Ratones</a></li>
-          </ul>
-        </li>
-        <li><a href="">Servicios</a></li>
-        <li><a href="">Contacto</a></li>
-      </ul>
-    </nav>
-    <section class="seccion-inicio">
-      <div class="cont-gral-inicio">
-        <div class="cont-ini-texto">
-         <h2>Perifericos</h2>
-         <p> Los mejores componentes del mercado al mejor precio</p>   
-        </div>
+        <form onsubmit="return validarLogin(event);">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Introduce tu email"
+              required
+            />
+          </div>
 
+          <div class="input-group">
+            <label for="password">Clave de Acceso (ok)</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Introduce la clave secreta"
+              required
+            />
+          </div>
 
-        <div class="cont-ini-img">
-          <img src="png/pngegg.png" />
-
+          <button type="submit" class="login-button">Iniciar Sesión</button>
+        </form>
       </div>
     </section>
 
-      <section class="servicios">
-        <div class="cont-gral-servicio">
-          <div class="cont-ini-texto">
-           <h3>Reviews</h3>
-           <p1> En este video te mostramos el unboxing de uno de nuestros teclados más populares. Queremos que conozcas de cerca la calidad de nuestros productos y todo lo que recibirás al hacer tu compra. Descubre los detalles del empaque, el diseño, la iluminación y el rendimiento que hacen de este periférico una excelente opción para gamers y amantes de la tecnología. En nuestra tienda apostamos por ofrecer componentes de calidad al mejor precio, ¡y queremos que lo veas por ti mismo!</p1>   
-          </div>
-  
-          <div class="cont-ini-video">
-            <iframe
-             width="560" height="315" 
-             src="https://www.youtube.com/embed/agwIV44ZN3s?si=oOxtq75QG3P8nPrK"
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen>
-            </iframe>
-
-          </section>
-          
-        <!--seccion contacto-->
-        <section class="seccion-formulario">
-          <div class="div-cont-formulario">
-            <h2>Formulario Contactanos</h2>
-            <p>Complete todos campos</p>
-
-              <form class="Formulario">
-                <div class="Campo">
-                  <label for="nombre">Nombre Completo:</label>
-                  <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
-                </div>
-             
-
-<!--Lista despegable-->
-                <div class="Campo">
-                  <label for="provincia">Provincia:</label>
-                  <select id="provincia" name="provincia">
-                    <option value="">Seleccione provincia</option>
-                    <option value="lima">Lima</option>
-                    <option value="arequipa">Arequipa</option>
-                    <option value="piura">Piura</option>
-                  </select>
-                  </div>
-                  
-              <!--lista checkbox-->
-              <div class="Campo">
-                <label>Intereses:</label>
-                <ul class="lista- checkbox">
-                  <li><label><input type="checkbox" name="intereses" value="laptop">Laptop</label></li>
-                  <li><label><input type="checkbox" name="intereses" value="computadora">Computadoras</label></li>
-                  <li><label><input type="checkbox" name="intereses" value="teclado">Perifericos</label></li>
-                </div>
-              <!--lista checkbox-->
-              <div class="Campo">
-                <label>sexo:</label>
-                <ul class="lista-radio">
-                  <li><label><input type="radio" name="sexo" value"Masculino">Masculino</label></li>
-                  <li><label><input type="radio" name="sexo" value"Femenino">Femenino</label></li>
-                </ul>
-              </div>
-              <button type="sumbit">Enviar</button>
-
-              </form>
-          </div>
-        </section>
-<!--Pie de Pagina-->
-<section id="footer">
-  <footer class="footer">
-    <div class="footer-container">
-      <!--Logo y nombre del sitio-->
-      <div class="footer-brand">
-        <img
-        src="/png/logo123.png"
-        alt="Logo"
-        class="footer-logo"
-        />
-        <p>AURALIS</p>
-        <small>© 2025 Todos los derechos reservados</small>
-      </div>
-      <!--Enlaces-->
-
-      <div class="fonter-lins">
-        <h4>Legal</h4>
-        <a href="/png/obtenerDocumento.pdf">Politica de Privacidad</a>
-        <a href="/png/TerminosYCondiciones.pdf">Terminos Y Condiciones</a>
-        <a href="/png/LeyProteccionDatos.pdf">Ley De Protección de Datos</a>
-      </div>
-
-      <!--Redes Sociales-->
-      <div class="footer-social">
-        <h4>Síguenos</h4>
-        <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
-                alt="Facebook"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
-                alt="Instagram"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
-                alt="LinkedIn"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
-                alt="Twitter"
-                class="social-icon"
-                /></a>
-      </div>
-      </div>
-    </div>
-  </footer>
-</section>
-
+    <script src="login.js"></script>
   </body>
 </html>

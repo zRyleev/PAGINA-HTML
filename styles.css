@@ -248,3 +248,14 @@
     margin-bottom: 0.5rem;
   }
 }
+.Menu-Horizontal li:last-child a {
+  background-color: #fc2525;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.Menu-Horizontal li:last-child a:hover {
+  background-color: #000000;
+}
