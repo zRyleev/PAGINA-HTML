@@ -86,7 +86,7 @@
   text-align: center;
 }
 
-..cont-ini-img img {
+.cont-ini-img img {
   width: 90%;
   max-width: 40.625rem;
   border-radius: 0.75rem;
